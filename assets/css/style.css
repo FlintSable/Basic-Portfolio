@@ -56,9 +56,6 @@ li {
     display: inline;
 }
 
-li:not(:first-child):before {
-    content: " | ";
-}
 
 a {
     text-decoration: none;
@@ -76,7 +73,7 @@ br {
 
 /*header*/
 
-.HeadWrap {
+#headwrap {
     position: fixed;
     z-index: 99;
     margin: 0 0 30px;
@@ -87,7 +84,7 @@ br {
     border-bottom: 2px soid #ccc;
 }
 
-.logo {
+#logo {
     width: 250px;
     height: 90px;
     float: left;
@@ -99,6 +96,11 @@ br {
     font-size: 30px;
     text-decoration: none;
     background: #4aaaa5;
+}
+
+#logo:hover,
+    input[type=submit]:hover {
+        background: #5E7F7E;
 }
 
 nav {
@@ -114,6 +116,10 @@ nav a {
     text-decoration: none;
     line-height: 18px;
     border-left: 1px solid #efefef;
+}
+
+nav a:hover {
+    color: #5E7F7E;
 }
 
 nav a:first-child {
@@ -133,6 +139,30 @@ footer {
     background: #666;
     border-top: 8px solid #4aaaa5;
 }
+
+/*sticky footer*/
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -105px;
+}
+
+footer,
+.push {
+  height: 105px;
+}
+
 
 
 /*sidebar*/
@@ -166,6 +196,10 @@ h3,
     margin-right: 0;
 }
 
+.social:hover {
+    cursor: pointer;
+    opacity: .8;
+}
 
 /*main*/
 
